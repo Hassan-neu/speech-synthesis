@@ -44,7 +44,8 @@ label {
 .main-voices select:focus {
     outline: none;
 }
-.btn {
+.btn,
+.pr-btn {
     padding: 0.3em 0.8em;
     border-radius: 5px;
 }

@@ -1,4 +1,5 @@
 const btn = document.querySelector(".btn");
+const pauseResume = document.querySelector(".pr-btn");
 const screen = document.querySelector(".main-screen");
 const voiceSelect = document.querySelector("[name='voice']");
 const ranges = document.querySelectorAll("[type='range']");
@@ -21,7 +22,6 @@ function selectVoice() {
 }
 function speak() {
     const mode = speechSynthesis.speaking ? "SPEAK 🔊" : "STOP 🚫⛔";
-    console.log(mode);
     if (speechSynthesis.speaking) {
         btn.innerText = mode;
         return speechSynthesis.cancel();
@@ -38,6 +38,11 @@ ranges.forEach((range) =>
         speak();
     })
 );
+pauseResume.addEventListener("click", function () {
+    const mode = speechSynthesis.paused ? "resume" : "pause";
+    speechSynthesis[mode]();
+    pauseResume.innerText = speechSynthesis.paused ? "PAUSE ⏸️" : "RESUME 🔃";
+});
 voiceSelect.addEventListener("change", selectVoice);
 speechSynthesis.addEventListener("voiceschanged", fetchVoices);
 btn.addEventListener("click", speak);
