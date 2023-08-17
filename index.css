@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #bada55;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+.main-screen {
+    width: 900px;
+    height: 600px;
+    border: 10px solid black;
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding: 0.5em 1.4em;
+}
+.main-screen p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+.main-screen:focus {
+    outline: none;
+}
+.main-voices {
+    margin-top: 1.5rem;
+}
+label {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.main-voices select {
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    padding: 0.3em 0.8em;
+}
+.main-voices select:focus {
+    outline: none;
+}
+.btn {
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+}
+input[type="range"]:hover {
+    cursor: pointer;
+}
+
+.function {
+    display: flex;
+    gap: 0.8em;
+}
+.fn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
